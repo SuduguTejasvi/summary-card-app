@@ -1,7 +1,7 @@
 import React from 'react';
 import { Slider, ThemeProvider } from '@mui/material';
 import Theme from '../../../themes/index';
-import { SliderComponentProps } from '../../../utils/interfaces';
+import { SliderComponentProps } from '../../../utils/interface';
 
 const SliderComponent: React.FC<SliderComponentProps> = ({
 	value,

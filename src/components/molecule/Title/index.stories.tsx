@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import SummaryTitle  from './index';
-import { TitleProps } from '../../../utils/interfaces';
+import { TitleProps } from '../../../utils/interface';
 
 const meta: Meta<typeof SummaryTitle> = {
   component: SummaryTitle,

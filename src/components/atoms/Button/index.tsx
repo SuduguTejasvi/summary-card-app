@@ -3,7 +3,7 @@ import { Button, ThemeProvider } from '@mui/material';
 import { useStyles } from './style';
 import Theme from '../../../themes';
 
-import { CustomButtonProps } from '../../../utils/interfaces';
+import { CustomButtonProps } from '../../../utils/interface';
 const CustomButton: React.FC<CustomButtonProps> = ({
 	label,
 	disabled,

@@ -7,7 +7,8 @@ import SliderComponent from '../../atoms/Slider';
 
 import TypeModule from '../../molecule/Term';
 import { container, ItemFormat } from './style';
-import { SummaryProps } from '../../../utils/interfaces';
+import { SummaryProps } from '../../../utils/interface';
+import { iicon } from '../../../utils/constant';
 
 const Summary: React.FC<SummaryProps> = ({ initialValue }) => {
 	const [sliderValue, setSliderValue] = useState(initialValue);
@@ -28,7 +29,7 @@ const Summary: React.FC<SummaryProps> = ({ initialValue }) => {
 	return (
 		<Grid container direction="column" spacing={2} style={container}>
 			<Grid item>
-				<SummaryTitle text="Summary" source="/asserts/images/info-circle.svg" />
+				<SummaryTitle text="Summary" source={iicon} alternateText="Information icon" />
 			</Grid>
 			<TypeModule texts={['Term:', '12 months', 'Selected Contracts', '3']} />
 			<Grid item container style={ItemFormat}>

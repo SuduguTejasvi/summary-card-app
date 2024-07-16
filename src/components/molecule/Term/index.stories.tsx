@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, StoryObj} from '@storybook/react';
 import TypeModule  from './index';
-import { TypeModuleTypo } from '../../../utils/interfaces';
+import { TypeModuleTypo } from '../../../utils/interface';
 
 const meta: Meta<typeof TypeModule> = {
   component: TypeModule,

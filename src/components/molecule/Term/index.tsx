@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import { Text } from '../../atoms/Typography/index';
 import { Margin, Padding } from '@mui/icons-material';
-import { TypeModuleTypo } from '../../../utils/interfaces';
+import { TypeModuleTypo } from '../../../utils/interface';
 import { noPadding, gridItem } from './style';
 
 const TypeModule: React.FC<TypeModuleTypo> = ({ texts }) => {
