@@ -11,7 +11,7 @@ jobs:
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
-    timeout-minutes: 10  # Set timeout for the SonarCloud job
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v3
         with:
@@ -26,7 +26,7 @@ jobs:
     name: Branch Analysis on PR merge
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-    timeout-minutes: 10  # Set timeout for the branchAnalysis job
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v3
         with:
@@ -44,7 +44,7 @@ jobs:
   sonarcloud_main:
     name: SonarCloud Main Branch Analysis
     runs-on: ubuntu-latest
-    timeout-minutes: 10  # Set timeout for the sonarcloud_main job
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v3
         with:
