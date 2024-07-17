@@ -1,4 +1,5 @@
 name: Build
+
 on:
   push:
     branches:
@@ -10,24 +11,26 @@ jobs:
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # Set timeout for the SonarCloud job
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0  
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   branchAnalysis:
     name: Branch Analysis on PR merge
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # Set timeout for the branchAnalysis job
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0  
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         with:
@@ -41,10 +44,11 @@ jobs:
   sonarcloud_main:
     name: SonarCloud Main Branch Analysis
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # Set timeout for the sonarcloud_main job
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0  
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
