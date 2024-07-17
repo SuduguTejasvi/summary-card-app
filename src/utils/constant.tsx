@@ -1,0 +1,1 @@
+export const iicon="/asserts/images/info-circle.svg";
